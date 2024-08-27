@@ -14,6 +14,8 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="shortcut icon" href="assets/design.png" type="image/x-icon">
+
     <script>
         tailwind.config = {
             theme: {
@@ -22,10 +24,14 @@
                         clifford: '#E76F51',
                         'clr':'#ABEF5F',
                     },
+
+                    fontFamily:
+                     "Manrope, sans-serif",
+
                     backgroundImage: {
                       'bg-image': "url('assets/bg.jpg')",
-                    }
-                },
+                    },
+                },              
             },
         }
     </script>
@@ -33,93 +39,87 @@
 </head>
 
 <body class="font-[Manrope]">
-
-    <header class="mt-12 mb-24 container mx-auto">
-        <div class="navbar bg-base-100 flex justify-between items-center px-8">
-            <div class="w-min flex justify-between flex-row-reverse">
-                <div class="dropdown">
-                    <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-60 h-60 items-center justify-evenly p-2 right-2 shadow font-bold text-lg bg-[#00000085] text-white backdrop-blur-sm">
-                      <li><a>Home</a></li>
-                      <li><a>Service</a></li>
-                      <li><a>Portfolio</a></li>
-                      <li><a>Blog</a></li>
-                      <li><a>Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="flex justify-center items-center gap-2 ">
-                    <span class="bg-[#ABEF5F] rounded-full px-3 py-2 text-xl"><i class=" fa-solid fa-arrow-up-long fa-rotate-by fa-lg "style="--fa-rotate-angle:50deg"></i></span>
-                    <p class="text-3xl font-bold">Rinterio</p>
-                </div>
-                
+    <header class="container mx-auto">
+        <div class="navbar bg-base-100 justify-between items-center px-8 mt-12 mb-12">
+            <div class="flex justify-center items-center gap-2">
+                <span class="bg-[#ABEF5F] rounded-full px-3 py-2 text-xl"><i class="fa-solid fa-arrow-up-long fa-rotate-by fa-lg "style="--fa-rotate-angle:50deg"></i></span>
+                <p class="text-3xl font-bold">Rinterio</p>
             </div>
-            <div class=" hidden xl:flex w-[50%]">
-                <ul class="menu menu-horizontal px-1 font-bold text-lg text-[#737373] w-full  justify-between">
-                    <li><a>Home</a></li>
-                    <li><a>Service</a></li>
-                    <li><a>Portfolio</a></li>
-                    <li><a>Blog</a></li>
-                    <li><a>Contact Us</a></li>
+            <div class="hidden xl:flex w-[50%]">
+                <ul class="menu menu-horizontal px-1 font-bold text-lg text-[#737373] w-full justify-between">
+                    <li class="cursor-pointer"><a>Home</a></li>
+                    <li class="cursor-pointer"><a>Service</a></li>
+                    <li class="cursor-pointer"><a>Portfolio</a></li>
+                    <li class="cursor-pointer"><a>Blog</a></li>
+                    <li class="cursor-pointer"><a>Contact Us</a></li>    
                 </ul>
             </div>
-            <div class=" gap-3 w-auto sm:flex sm:w-full sm:flex-row-reverse lg:w-auto lg:flex">
-                <div tabindex="0" role="button" class="btn btn-ghost border-2 border-gray-200 h-[4em] w-[4em] rounded-ful lg:hidden">
-                    <i class="fa-solid fa-bars fa-xl text-[#737373]"></i>
+            <div class="flex flex-row justify-center items-center relative gap-3">
+                <div class="relative hidden md:block">
+                    <i class="fa-solid fa-magnifying-glass fa-lg absolute pointer-events-none border-2 border-gray-200 fa-lg px-3 py-[22px] rounded-full"></i>
+                    <input type="search" placeholder="Search..." class="outline-none text-base bg-transparent text-black font-normal pl-[3.2em] duration-500 w-[50px] h-[50px] lg:focus:w-[230px] md:focus:w-[190px] ">
                 </div>
-                <div class="border-2 border-gray-200 rounded-[30px] hidden sm:flex">
-                    <i class="fa-solid fa-magnifying-glass fa-lg px-3 py-[22px]"></i>
+                    <a href="" class="hover:scale-[1.09] active:scale-90 transition duration-300 ease-in-out"><i class="fa-solid fa-cart-shopping fa-lg px-3 py-[22px] border-2 border-gray-200 rounded-[30px] hidden sm:block"></i></a>
+                                     
+                <div class="hidden md:block">
+                    <button class="btn btn-secondary bg-clr border-none hover:bg-clr hover:scale-[1.09] transition duration-300 ease-in-out text-lg font-extrabold	rounded-[30px] text-[#1C1C1C] w-full sm:w-auto">Book Consult <span class="bg-black rounded-full px-2.5 py-1"><i class=" fa-solid fa-arrow-up-long fa-rotate-by fa-lg text-white" style="--fa-rotate-angle: 50deg;"></i></span> </button>
                 </div>
-                <div class="border-2 border-gray-200 rounded-[30px] hidden sm:flex">
-                    <i class="fa-solid fa-cart-shopping fa-lg px-3 py-[22px]"></i>
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class=" btn btn-ghost border-2 border-gray-200 h-[4em] w-[4em] rounded-full xl:hidden">
+                        <i class="fa-solid fa-bars fa-xl text-[#737373]"></i>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content bg-[#00000081] text-white rounded-box z-[1] mt-3 w-64 h-72 items-center justify-evenly p-2 right-2 shadow font-bold text-2xl backdrop-blur-sm">
+                        <li class="cursor-pointer"><a>Home</a></li>
+                        <li class="cursor-pointer"><a>Service</a></li>
+                        <li class="cursor-pointer"><a>Portfolio</a></li>
+                        <li class="cursor-pointer"><a>Blog</a></li>
+                        <li class="cursor-pointer"><a>Contact Us</a></li>
+                        <div class="relative md:hidden">
+                            <i class="fa-solid fa-magnifying-glass fa-lg absolute pointer-events-none fa-lg px-3 py-[22px]"></i>
+                            <input type="search" placeholder="Search..." class="outline-none text-base bg-transparent text-white font-normal pl-[3.2em] duration-500 w-[50px] h-[50px] focus:w-[230px]">
+                        </div>
+                    </ul>
                 </div>
-                <button class="btn btn-secondary bg-clr border-none hover:bg-clr text-lg font-extrabold	rounded-[30px] text-[#1C1C1C] hidden sm:flex">Book Consult <span class="bg-black rounded-full px-2.5 py-1"><i class=" fa-solid fa-arrow-up-long fa-rotate-by fa-lg text-white" style="--fa-rotate-angle: 50deg;"></i></span> </button>
             </div>
         </div>
     </header>
 
     <main>
 
-             <!-- ............................................................   Barn House .................................................... -->
+        <!-- ............................................................   Barn House .................................................... -->
 
         <section class="container mx-auto ">
-
-            <div class="flex flex-col justify-center items-center gap-12 px-8 sm:px-0 ">
+            <div class="flex flex-col justify-center items-center space-y-8 px-8 sm:px-0">
                 <div>
                     <img src="assets/banner.png" alt="">
                 </div>
-                <div class="text-center">
-                    <h1 class="text-4xl font-extrabold text-[#212121] mb-12">A barn house of this design  has a <br> striking appearance</h1>
-                    <p class="font-medium text-[#494949]">Modern barn houses are a contemporary take on traditional barn-style architecture. <br> These homes combine the rustic charm of a classic barn with the sleek and sophisticated <br> design elements of modern architecture.</p>
+                <div class="text-center space-y-5">
+                    <h1 class="text-[32px] md:text-[36px] xl:text-[50px] font-extrabold text-[#212121] w-auto mx-auto md:w-[80%] lg:w-[70%] xl:w-[60%]">A barn house of this design has a striking appearance</h1>
+                    <p class="font-medium text-[#494949] w-auto mx-auto md:w-[80%] lg:w-[60%] xl:w-[50%]">Modern barn houses are a contemporary take on traditional barn-style architecture. These homes combine the rustic charm of a classic barn with the sleek and sophisticated design elements of modern architecture.</p>
                 </div>
                 <div>
-                    <button class="btn btn-secondary bg-[#ABEF5F80] border-2 border-[#abef5d] hover:bg-[#ABEF5F80] hover:border-[#abef5d] text-lg font-extrabold rounded-[30px] text-[#1C1C1C]">View Details <span class="bg-[#ABEF5F] rounded-full px-2.5 py-1"><i class=" fa-solid fa-arrow-up-long fa-rotate-by fa-lg" style="--fa-rotate-angle: 50deg;"></i></span> </button>
+                    <button class="btn btn-secondary bg-[#ABEF5F80] border-2 border-[#abef5d] hover:bg-[#ABEF5F80] hover:border-[#abef5d] hover:scale-[1.09] transition duration-300 ease-in-out text-lg font-extrabold rounded-[30px] text-[#1C1C1C]">View Details <span class="bg-[#ABEF5F] rounded-full px-2.5 py-1"><i class="fa-solid fa-arrow-up-long fa-rotate-by fa-lg" style="--fa-rotate-angle: 50deg;"></i></span> </button>
                 </div>
             </div>
         </section>
 
         <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\   About Us ////////////////////////////////////////////////////// -->
 
-
         
-        <section class="bg-gray-100 mt-24 px-5 sm:px-0 py-20">
-
-
+        <section class="bg-gray-100 mt-24 sm:px-0 py-20">
             <div class="container mx-auto">
-                <div class="mb-12 hidden lg:block w-[95%] mx-auto ">
+                <div class="hidden xl:block w-[95%] mx-auto mb-8 2xl:mb-0">
                     <img class="" src="assets/Vector.png" alt="">
                 </div>
-                <div class="flex flex-col items-center justify-between w-[90%] lg:flex-row mx-auto">
-                   
-                    <div class="space-y-5 flex flex-col justify-center items-center text-center lg:items-start lg:text-left lg:w-[70%] xl:w-1/2">
+                <div class="flex flex-col items-center justify-between w-[90%] mx-auto md:items-end lg:flex-row lg:gap-12 xl:items-end 2xl:gap-0">
+                    <div class="space-y-5 flex flex-col justify-center items-center text-center lg:items-start lg:text-left lg:w-[70%] xl:w-[50%]">
                         <div>
-                            <button class="btn btn-secondary bg-white border-2 border-none hover:bg-white hover:border-none text-lg font-extrabold rounded-[30px] text-[#1C1C1C]"> <i class="fa-solid fa-arrow-right-long fa-lg" style="--fa-rotate-angle: 50deg;"></i>About Us</button>
+                            <button class="btn btn-secondary bg-white border-2 border-none hover:bg-white hover:border-none hover:scale-[1.09] transition duration-300 ease-in-out text-lg font-extrabold rounded-[30px] text-[#1C1C1C]"><i class="fa-solid fa-arrow-right-long fa-lg" style="--fa-rotate-angle:50deg;"></i>About Us</button>
                         </div>
-                        
-        
-                        <h1 class="text-[32px] sm:text-[40px] font-bold text-[##212121]">We design thoughtful, <br> liveable spaces</h1>
-                        <p class="text-[#494949] font-normal lg:w-[100%] ">We design thoughtful, liveable spaces
+                        <h1 class="text-[32px] lg:text-[40px] font-bold text-[##212121] 2xl:w-[80%]">We design thoughtful, liveable spaces</h1>
+                        <p class="text-[#494949] font-normal w-auto mx-auto md:w-[80%] md:mx-0 lg:w-auto 2xl:w-[75%]">We design thoughtful, liveable spaces
                             We have over 25 years of experience in designing and installing all manner of interior projects from tiny terrace seaside cottages to rolling country
                         </p>
-        
                         <div class="space-y-5 flex flex-col sm:flex-row sm:space-y-0 sm:gap-5 lg:gap-0 lg:flex-col lg:space-y-5">
                             <div class="bg-white rounded-2xl flex gap-5 items-center text-left p-5 lg:p-8">
                                 <img src="assets/commercial.png" alt="">
@@ -128,7 +128,6 @@
                                     <p class="text-[#737373] font-normal">The barn house captivates with its blend of rustic charm and modern.</p>
                                 </div>
                             </div>
-        
                             <div class="bg-white rounded-2xl inline-flex gap-5 items-center text-left p-5 lg:p-8">
                                 <img src="assets/residential.png" alt="">
                                 <div class="space-y-2 lg:w-[50%]">
@@ -137,14 +136,12 @@
                                 </div>
                             </div>
                         </div>
-        
                     </div>
-                    <div class="mt-8 border-2 sm:w-full lg:w-auto">
+                    <div class="mt-8 sm:w-full lg:w-auto">
                         <img class="sm:w-full lg:w-fit" src="assets/Rectangle.png" alt="">
                     </div>
                 </div>
             </div>
-
 
 
             <!-- ........................................................    Number  .......................................................... -->
@@ -177,47 +174,41 @@
         </section>
 
 
-
         <!-- |||||||||||||||||||||||||||||||||||||||||||||    Work Process ||||||||||||||||||||||||||||||||||||||||||||||| -->
 
 
         <section class=" bg-gray-100 pb-24">
-       
-        <div class="container mx-auto">
-    
-            <div class="flex flex-col justify-center items-center text-center space-y-5 w-[90%] mx-auto">
-                <div>
-                    <button class="btn btn-secondary bg-white border-2 border-none hover:bg-white hover:border-none text-lg font-extrabold rounded-[30px] text-[#1C1C1C]"><i class="fa-solifa-arrow-right-long fa-lg" style="--fa-rotate-angle: 50deg;"></i>How we works</button>
+            <div class="container mx-auto">
+                <div class="flex flex-col justify-center items-center text-center space-y-5 w-[90%] mx-auto">
+                    <div>
+                        <button class="btn btn-secondary bg-white border-2 border-none hover:bg-white hover:border-none hover:scale-[1.09] transition duration-300 ease-in-out text-lg font-extrabold rounded-[30px] text-[#1C1C1C]"><i class="fa-solid fa-arrow-right-long fa-lg" style="--fa-rotate-angle: 50deg;"></i>How we works</button>
+                    </div>
+                    <h1 class="text-[32px] lg:text-[40px] font-bold text-[#212121]">Our Works Process</h1>
+                    <p class="text-[#494949] font-normal lg:w-[80%] xl:w-[70%] 2xl:w-[60%]">We Provide Easy and Affordable Architectural Design Solutions. We do New Builds, Renovations and Extensions. Maximise your Property's Design potential.</p>
                 </div>
-               
-                <h1 class="text-[40px] font-bold text-[#212121]">Our Works Process</h1>
-                <p class="text-[#494949] font-normal">We Provide Easy and Affordable Architectural Design Solutions. We do New Builds, Renovations and Extensions. Maximise your Property's Design potential.</p>
+                <div class="w-[90%] mx-auto grid grid-cols-1 gap-2 mt-12 space-y-5 sm:grid-cols-2 sm:space-y-0 sm:gap-8 lg:grid-cols-2  lg:space-y-0 xl:grid-cols-4">
+                    <div class="bg-[#E7C1D3] rounded-2xl p-8 space-y-4">
+                        <img src="assets/concept.png" alt="">
+                        <h1 class="text-xl font-extrabold">Concept</h1>
+                        <p>A collaborative approach to all projects to create spaces that are functional, beautiful, and unique.</p>
+                    </div>
+                    <div class="bg-[#EFDA6E] rounded-2xl p-8 space-y-4">
+                        <img src="assets/flow-chart.png" alt="">
+                        <h1 class="text-xl font-extrabold">Design Process</h1>
+                        <p>The architectural design process is made up of seven phases: pre-design, schematic design etc..</p>
+                    </div>
+                    <div class="bg-[#A4DAC3] rounded-2xl p-8 space-y-4">
+                        <img src="assets/vision.png" alt="">
+                        <h1 class="text-xl font-extrabold">Supervision</h1>
+                        <p>supervises an architectural design group in the creation of plans and designs for major buildings.</p>
+                    </div>
+                    <div class="bg-[#77AAEA] rounded-2xl p-8 space-y-4">
+                        <img src="assets/budget-planning.png" alt="">
+                        <h1 class="text-xl font-extrabold">Budget Planning</h1>
+                        <p>A project budget is the total estimated cost of completing each individual projects</p>
+                    </div>
+                </div>
             </div>
-    
-            <div class="w-[90%] mx-auto grid grid-cols-1 gap-2 mt-12 space-y-5 sm:grid-cols-2 sm:space-y-0 sm:gap-8 lg:grid-cols-2  lg:space-y-0 xl:grid-cols-4">
-                <div class="bg-[#E7C1D3] rounded-2xl p-8 space-y-4">
-                    <img src="assets/concept.png" alt="">
-                    <h1 class="text-xl font-extrabold">Concept</h1>
-                    <p>A collaborative approach to all projects to create spaces that are functional, beautiful, and unique.</p>
-                </div>
-                <div class="bg-[#EFDA6E] rounded-2xl p-8 space-y-4">
-                    <img src="assets/flow-chart.png" alt="">
-                    <h1 class="text-xl font-extrabold">Design Process</h1>
-                    <p>The architectural design process is made up of seven phases: pre-design, schematic design etc..</p>
-                </div>
-                <div class="bg-[#A4DAC3] rounded-2xl p-8 space-y-4">
-                    <img src="assets/vision.png" alt="">
-                    <h1 class="text-xl font-extrabold">Supervision</h1>
-                    <p>supervises an architectural design group in the creation of plans and designs for major buildings.</p>
-                </div>
-                <div class="bg-[#77AAEA] rounded-2xl p-8 space-y-4">
-                    <img src="assets/budget-planning.png" alt="">
-                    <h1 class="text-xl font-extrabold">Budget Planning</h1>
-                    <p>A project budget is the total estimated cost of completing each individual projects</p>
-                </div>
-    
-            </div>
-        </div>
         </section>
 
 
@@ -230,134 +221,111 @@
                     <div>
                         <button class="btn btn-secondary bg-[#ABEF5F33] border-2 border-none hover:bg-[#ABEF5F33] hover:border-none text-lg font-extrabold rounded-[30px] text-[#1C1C1C]"><i class="fa-solid fa-arrow-right-long fa-lg" style="--fa-rotate-angle: 50deg;"></i>Explore our Latest works</button>
                     </div>
-           
-                    <h1 class="text-[40px] font-bold text-[#212121]">Our Latest Portfolio</h1>
-                    <p class="text-[#494949] font-normal">Explore a selection of our latest projects, each a testament to our commitment to innovation, creativity,  and excellence in design.</p>
+                    <h1 class="text-[32px] lg:text-[40px] font-bold text-[#212121]">Our Latest Portfolio</h1>
+                    <p class="text-[#494949] font-normal w-[90%] lg:w-[80%]">Explore a selection of our latest projects, each a testament to our commitment to innovation, creativity,  and excellence in design.</p>
                 </div>
-        
                 <div class="grid grid-cols-1 mt-12 gap-8 sm:grid-cols-2">
-
                     <div class="flex flex-col border-2 border-gray-200 rounded-2xl p-8 space-y-5 sm:col-span-2 sm:flex-row sm:gap-8">
                         <img class="w-full sm:w-auto" src="assets/img1.png" alt="">
                         <div class=" space-y-5 ">
                             <h1 class="text-2xl	font-extrabold text-[#494949]">Commercial</h1>
                             <p class="font-normal text-[#494949]">We specialize in Unique and Inspiring interiors for boutique holiday home letting We deliver owners a stunning magical interiors that your guests will love. </p>
-                            <div class="flex justify-start items-center gap-2">
+                            <div class="flex justify-start items-center gap-2 cursor-pointer">
                                 <p class="text-xl font-extrabold">View Details</p>
                                 <span class="bg-[#ABEF5F] rounded-full px-3 py-1 "><i class=" fa-solid fa-arrow-up-long fa-rotate-by "style="--fa-rotate-angle:50deg"></i></span>
                             </div>
                         </div>
                     </div>
-    
                     <div class="border-2 border-gray-200 rounded-2xl p-7 ">
                         <img class="sm:h-full" src="assets/img2.png" alt="">
                     </div>
-    
                     <div class="border-2 border-gray-200 rounded-2xl p-7 ">
                         <img class="w-full" src="assets/img3.png" alt="">
                     </div>
-    
                     <div class="flex flex-col border-2 border-gray-200 rounded-2xl p-8 space-y-5 sm:col-span-2 sm:flex-row sm:gap-8">
                         <img class="w-full sm:w-auto" src="assets/img4.png" alt="">
                         <div class=" space-y-5 ">
                             <h1 class="text-2xl	font-extrabold text-[#494949]">Commercial</h1>
                             <p class="font-normal text-[#494949]">Our work is regularly used in the many top end home magazine titles as well as for luxury holiday letting company Unique Home Stays.</p>
-                            <div class="flex justify-start items-center gap-2">
+                            <div class="flex justify-start items-center gap-2 cursor-pointer">
                                 <p class="text-xl font-extrabold">View Details</p>
                                 <span class="bg-[#ABEF5F] rounded-full px-3 py-1 "><i class=" fa-solid fa-arrow-up-long fa-rotate-by "style="--fa-rotate-angle:50deg"></i></span>
                             </div>
                         </div>
                     </div>
-    
                     <div class="border-2 border-gray-200 rounded-2xl p-7 ">
                         <img class="w-full" src="assets/img5.png" alt="">
                     </div>
-                    
                     <div class="border-2 border-gray-200 rounded-2xl p-7 ">
                         <img class="w-full" src="assets/img3.png" alt="">
                     </div>
                 </div>
             </div>
 
-            <div class="w-[90%] mx-auto hidden xl:block ">
+            <div class="w-[90%] mx-auto hidden xl:block">
                 <div class="flex flex-col justify-center items-center text-center space-y-5">
                     <div>
-                        <button class="btn btn-secondary bg-[#ABEF5F33] border-2 border-none hover:bg-[#ABEF5F33] hover:border-none text-lg font-extrabold rounded-[30px] text-[#1C1C1C]"><i class="fa-solid fa-arrow-right-long fa-lg" style="--fa-rotate-angle: 50deg;"></i>Explore our Latest works</button>
+                        <button class="btn btn-secondary bg-[#ABEF5F33] border-2 border-none hover:bg-[#ABEF5F33] hover:border-none hover:scale-[1.09] transition duration-300 ease-in-out text-lg font-extrabold rounded-[30px] text-[#1C1C1C]"><i class="fa-solid fa-arrow-right-long fa-lg" style="--fa-rotate-angle: 50deg;"></i>Explore our Latest works</button>
                     </div>
-           
                     <h1 class="text-[40px] font-bold text-[#212121]">Our Latest Portfolio</h1>
                     <p class="text-[#494949] font-normal">Explore a selection of our latest projects, each a testament to our commitment to innovation, creativity, <br> and excellence in design.</p>
                 </div>
-
-                <div class="mt-12">
-
-                    <div class="flex flex-row items-center mb-5 justify-between">
-                        <div class="border-2 border-gray-200 rounded-2xl inline-flex items-center text-left gap-5 p-7 w-[60em] ">
+                <div class="mt-12 flex flex-col gap-2 2xl:gap-12">
+                    <div class="flex flex-row items-center justify-between gap-2 2xl:gap-12">
+                        <div class="border-2 border-gray-200 rounded-2xl inline-flex items-center text-left gap-5 p-7 w-[48em] 2xl:w-[60em]">
                             <img src="assets/img1.png" alt="">
                             <div class="flex flex-col justify-between h-[10em]">
                                 <h1 class="text-2xl	font-extrabold text-[#494949]">Commercial</h1>
                                 <p class="font-normal text-[#494949]">We specialize in Unique and Inspiring interiors for boutique holiday home letting We deliver owners a stunning magical interiors that your guests will love.</p>
-                                <div class="flex justify-start items-center gap-2">
-                                    <p class="text-xl font-extrabold">View Details</p>
+                                <div class="flex justify-start items-center gap-2 cursor-pointer">
+                                    <a class="text-xl font-extrabold">View Details</a>
                                     <span class="bg-[#ABEF5F] rounded-full px-3 py-1 "><i class=" fa-solid fa-arrow-up-long fa-rotate-by "style="--fa-rotate-angle:50deg"></i></span>
                                 </div>
                             </div>
                         </div>
-        
                         <div class="border-2 border-gray-200 rounded-2xl p-7 ">
                             <img  src="assets/img2.png" alt="">
                         </div>
                     </div>
-    
-                    <div class="flex items-center justify-between">
-
+                    <div class="flex items-center justify-between gap-2 2xl:gap-12">
                         <div class="border-2 border-gray-200 rounded-2xl p-7 ">
                             <img src="assets/img3.png" alt="">
                         </div>
-    
-                        <div class="border-2 border-gray-200 rounded-2xl inline-flex items-center text-left gap-5 p-7 w-[46em]">
+                        <div class="border-2 border-gray-200 rounded-2xl inline-flex items-center text-left gap-5 p-7 w-[36.2em] 2xl:w-[46em]">
                             <img src="assets/img4.png" alt="">
                             <div class="flex flex-col justify-between h-[10em]">
                                 <h1 class="text-2xl	font-extrabold text-[#494949]">Commercial</h1>
                                 <p class="font-normal text-[#494949]">Our work is regularly used in the many top end home magazine titles as well as for luxury holiday letting company Unique Home Stays.</p>
-                                <div class="flex justify-start items-center gap-2">
+                                <div class="flex justify-start items-center gap-2 cursor-pointer">
                                     <p class="text-xl font-extrabold">View Details</p>
                                     <span class="bg-[#ABEF5F] rounded-full px-3 py-1 "><i class=" fa-solid fa-arrow-up-long fa-rotate-by "style="--fa-rotate-angle:50deg"></i></span>
                                 </div>
                             </div>
                         </div>
-    
                         <div class="border-2 border-gray-200 rounded-2xl p-7 ">
                             <img src="assets/img5.png" alt="">
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </section>
-
 
 
         <!-- ............................................ Article And News ................................................. -->
 
 
         <section class="bg-gray-100 mt-28 py-16">
-
             <div class="container mx-auto flex flex-col justify-center items-center">
                 <div class="flex flex-col justify-center items-center text-center space-y-5 mb-8 w-[90%]">
                     <div>
-                        <button class="btn btn-secondary bg-[#ABEF5F33] border-2 border-none hover:bg-[#ABEF5F33] hover:border-none text-lg font-extrabold rounded-[30px] text-[#1C1C1C]"><i class="fa-solid fa-arrow-right-long fa-lg" style="--fa-rotate-angle: 50deg;"></i>Rinterio News</button>
+                        <button class="btn btn-secondary bg-[#ABEF5F33] border-2 border-none hover:bg-[#ABEF5F33] hover:border-none hover:scale-[1.09] transition duration-300 ease-in-out text-lg font-extrabold rounded-[30px] text-[#1C1C1C]"><i class="fa-solid fa-arrow-right-long fa-lg" style="--fa-rotate-angle: 50deg;"></i>Rinterio News</button>
                     </div>
-           
-                    <h1 class="text-[40px] font-bold text-[#212121]">Read Our Articles and News</h1>
+                    <h1 class="text-[32px] lg:text-[40px] font-bold text-[#212121]">Read Our Articles and News</h1>
                     <p class="text-[#494949] font-normal">Explore a selection of our latest projects, each a testament to our commitment to innovation, creativity,  and excellence in design.</p>
                 </div>
-    
                 <div class="flex flex-col justify-between w-[90%] lg:flex-row gap-12 lg:gap-5">
-                    <div class="bg-white rounded-2xl p-8 space-y-3 flex flex-col sm:flex-row sm:gap-8 lg:flex-col lg:gap-2 ">
+                    <div class="bg-white rounded-2xl p-8 space-y-3 flex flex-col sm:flex-row sm:gap-8 lg:flex-col lg:gap-2">
                         <img class="sm:w-[40%] lg:w-auto" src="assets/article1.png" alt="">
-
                         <div class="flex flex-col space-y-3">
                             <div class="flex items-center gap-3">
                                 <i class="fa-solid fa-calendar-days text-[#737373]"></i>
@@ -370,17 +338,14 @@
                                 <p>Consider your daily activities, hobbies, and <br> the needs of your household. Furniture <br> pieces should not only look good but <br> also serve a purpose.</p>
                             </div>
                           
-                            <div class="flex justify-start items-center gap-2">
+                            <div class="flex justify-start items-center gap-2 cursor-pointer">
                                 <p class="text-xl font-extrabold">View Details</p>
                                 <span class="bg-[#ABEF5F] rounded-full px-3 py-1 "><i class=" fa-solid fa-arrow-up-long fa-rotate-by "style="--fa-rotate-angle:50deg"></i></span>
                             </div>
                         </div>
-                
                     </div>
-
                     <div class="bg-white rounded-2xl p-8 space-y-3 flex flex-col sm:flex-row sm:gap-8 lg:flex-col lg:gap-0">
                         <img class="sm:w-[40%] lg:w-auto" src="assets/article2.png" alt="">
-
                         <div class="flex flex-col space-y-3">
                             <div class="flex items-center gap-3">
                                 <i class="fa-solid fa-calendar-days text-[#737373]"></i>
@@ -392,17 +357,14 @@
                                 <h1 class="text-xl font-extrabold">How to choose the furniture right <br> of your home.</h1>
                                 <p>Consider your daily activities, hobbies, and <br> the needs of your household. Furniture <br> pieces should not only look good but <br> also serve a purpose.</p>
                             </div>
-                          
-                            <div class="flex justify-start items-center gap-2">
+                            <div class="flex justify-start items-center gap-2 cursor-pointer">
                                 <p class="text-xl font-extrabold">View Details</p>
                                 <span class="bg-[#ABEF5F] rounded-full px-3 py-1 "><i class=" fa-solid fa-arrow-up-long fa-rotate-by "style="--fa-rotate-angle:50deg"></i></span>
                             </div>
                         </div>
                     </div>
-
                     <div class="bg-white rounded-2xl p-8 space-y-3 flex flex-col sm:flex-row sm:gap-8 lg:flex-col lg:gap-0">
                         <img class="sm:w-[40%] lg:w-auto" src="assets/article3.png" alt="">
-
                         <div class="flex flex-col space-y-3">
                             <div class="flex items-center gap-3">
                                 <i class="fa-solid fa-calendar-days text-[#737373]"></i>
@@ -413,9 +375,8 @@
                             <div class="space-y-2">
                                 <h1 class="text-xl font-extrabold">How to choose the furniture right <br> of your home.</h1>
                                 <p>Consider your daily activities, hobbies, and <br> the needs of your household. Furniture <br> pieces should not only look good but <br> also serve a purpose.</p>
-                            </div>
-                          
-                            <div class="flex justify-start items-center gap-2">
+                            </div>                      
+                            <div class="flex justify-start items-center gap-2 cursor-pointer">
                                 <p class="text-xl font-extrabold">View Details</p>
                                 <span class="bg-[#ABEF5F] rounded-full px-3 py-1 "><i class=" fa-solid fa-arrow-up-long fa-rotate-by "style="--fa-rotate-angle:50deg"></i></span>
                             </div>
@@ -423,7 +384,6 @@
                     </div>
                 </div>
             </div>
-          
         </section>
 
 
@@ -431,140 +391,129 @@
 
 
         <section class="container mx-auto mt-28">
-            <div class="flex flex-col justify-between items-center w-[90%] mx-auto lg:flex-row ">
-
-                <div class="flex flex-col items-center justify-center text-center lg:items-start lg:text-left gap-5 mb-8">
+            <div class="flex flex-col justify-between items-center w-[90%] mx-auto lg:flex-row">
+                <div class="flex flex-col items-center justify-center text-center lg:items-start lg:text-left gap-8 mb-8">
                     <h1 class="text-base font-semibold text-center text-[#494949] rounded-full border-gray-300 border-2 p-3 z-10">Testimonials</h1>
-                    <h1 class="text-5xl lg:text-7xl font-bold text-[#212121] z-10">Client <br> Experiences</h1>
+                    <h1 class="text-5xl lg:text-7xl font-bold text-[#212121] z-10">Client<br>Experiences</h1>
                 </div>
-
-                    <div class="carousel w-[100%] lg:w-[40%] h-[20em] rounded-3xl border-2">
-                        <div id="slide1" class="carousel-item relative w-full justify-center items-center">
-                            <div class="w-[90%] space-y-5">
-                                
+                <div class="carousel w-[100%] lg:w-[40%] h-[20em] rounded-3xl border-2">
+                    <div id="slide1" class="carousel-item relative w-full justify-center items-center">
+                        <div class="w-[90%] space-y-5">
+                            <div>
+                                <p>"Rinterio attention to detail and commitment to quality are truly remarkable. We engaged them for a complex renovation project, and they navigated the challenges with skill and expertise."
+                                </p>
+                            </div>
+                            <div class="flex justify-start items-center gap-5">
+                                <img class="rounded-full w-[20%]" src="assets/people1.png" alt="">
                                 <div>
-                                  <p>"Rinterio attention to detail and commitment to quality are truly remarkable. We engaged them for a complex renovation project, and they navigated the challenges with skill and expertise."</p>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <h1 class="text-xl font-bold">Robert Gold</h1>
+                                    <p>Georgia , USA</p>
                                 </div>
-                                <div class="flex justify-start items-center gap-5">
-                                    <img class="rounded-full w-[20%]" src="assets/people1.png" alt="">
-                                    <div>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <h1 class="text-xl font-bold">Robert Gold</h1>
-                                        <p>Georgia , USA</p>
-                                    </div>
-                                </div>
-                            </div>
-                         
-                            <div class="absolute left-[65%] right-[5%] top-[75%] lg:top-[70%] flex -translate-y-1/2 transform justify-between">
-                              <a href="#slide5" class="btn btn-circle border-black">❮</a>
-                              <a href="#slide2" class="btn btn-circle border-black">❯</a>
                             </div>
                         </div>
-
-
-                        <div id="slide2" class="carousel-item relative w-full justify-center items-center  ">
-                            <div class="w-[90%]">
-                                
-                                <div class="pb-5">
-                                  <p>"We felt valued and listened to throughout the entire design process with Rinterio . They took the time to understand our vision and incorporated our ideas into the design. The result is a unique space that reflects our personality and style."</p>
-                                </div>
-                                <div class="flex justify-start items-center gap-5">
-                                   <img class="rounded-full w-[20%]" src="assets/people2.png" alt="">
-                                    <div>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <h1 class="text-xl font-bold">Mark Smith</h1>
-                                        <p>Moscow Russia</p>
-                                    </div>
+                        <div class="absolute left-[65%] right-[5%] top-[75%] lg:top-[70%] flex -translate-y-1/2 transform justify-between">
+                          <a href="#slide5" class="btn btn-circle border-black">❮</a>
+                          <a href="#slide2" class="btn btn-circle border-black">❯</a>
+                        </div>
+                    </div>
+                    <div id="slide2" class="carousel-item relative w-full justify-center items-center">
+                        <div class="w-[90%] space-y-5">                            
+                            <div class="pb-5">
+                              <p>"We felt valued and listened to throughout the entire design process with Rinterio . They took the time to understand our vision andincorporated our ideas into the design. The result is a unique space that reflects our personality and style."</p>
+                            </div>
+                            <div class="flex justify-start items-center gap-5">
+                                <img class="rounded-full w-[20%]" src="assets/people2.png" alt="">
+                                <div>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <h1 class="text-xl font-bold">Mark Smith</h1>
+                                    <p>Moscow Russia</p>
                                 </div>
                             </div>
-                          <div class="absolute left-[65%] right-[5%] top-[75%] lg:top-[70%] flex -translate-y-1/2 transform justify-between">
-                            <a href="#slide1" class="btn btn-circle border-black">❮</a>
-                            <a href="#slide3" class="btn btn-circle border-black">❯</a>
-                          </div>
                         </div>
-                        <div id="slide3" class="carousel-item relative w-full justify-center items-center  ">
-                            <div class="w-[90%]">
-                                
-                                <div class="pb-5">
-                                  <p>"Working with Rinterio was an absolute pleasure. The team listened carefully to our needs and delivered a design that exceeded our expectations. The attention to detail in every aspect of the project was outstanding."</p>
-                                </div>
-                                <div class="flex justify-start items-center gap-5">
-                                   <img class="rounded-full w-[20%]" src="assets/people3.png" alt="">
-                                    <div>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <h1 class="text-xl font-bold">Dwane Jhonson</h1>
-                                        <p>Pickachu , Russia</p>
-                                    </div>
+                        <div class="absolute left-[65%] right-[5%] top-[75%] lg:top-[70%] flex -translate-y-1/2 transform justify-between">
+                          <a href="#slide1" class="btn btn-circle border-black">❮</a>
+                          <a href="#slide3" class="btn btn-circle border-black">❯</a>
+                        </div>
+                    </div>
+                    <div id="slide3" class="carousel-item relative w-full justify-center items-center">
+                        <div class="w-[90%] space-y-5">                            
+                            <div class="pb-5">
+                              <p>"Working with Rinterio was an absolute pleasure. The team listened carefully to our needs and delivered a design that exceeded ourexpectations. The attention to detail in every aspect of the project was outstanding."</p>
+                            </div>
+                            <div class="flex justify-start items-center gap-5">
+                                <img class="rounded-full w-[20%]" src="assets/people3.png" alt="">
+                                <div>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <h1 class="text-xl font-bold">Dwane Jhonson</h1>
+                                    <p>Pickachu , Russia</p>
                                 </div>
                             </div>
-                          <div class="absolute left-[65%] right-[5%] top-[75%] lg:top-[70%] flex -translate-y-1/2 transform justify-between">
-                            <a href="#slide2" class="btn btn-circle border-black">❮</a>
-                            <a href="#slide4" class="btn btn-circle border-black">❯</a>
-                          </div>
                         </div>
-                        <div id="slide4" class="carousel-item relative w-full justify-center items-center  ">
-                            <div class="w-[90%]">
-                                
-                                <div class="pb-5">
-                                  <p>"Quality is clearly a top priority for Rinterio. Every aspect of the design and construction process was handled with care and precision. They were always available to address our concerns and ensured that we were completely satisfied with the outcome."</p>
-                                </div>
-                                <div class="flex justify-start items-center gap-5">
-                                   <img class="rounded-full w-[20%]" src="assets/people4.png" alt="">
-                                    <div>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <h1 class="text-xl font-bold">Scarlet Witch</h1>
-                                        <p>Atlanta , UK</p>
-                                    </div>
+                        <div class="absolute left-[65%] right-[5%] top-[75%] lg:top-[70%] flex -translate-y-1/2 transform justify-between">
+                          <a href="#slide2" class="btn btn-circle border-black">❮</a>
+                          <a href="#slide4" class="btn btn-circle border-black">❯</a>
+                        </div>
+                    </div>
+                    <div id="slide4" class="carousel-item relative w-full justify-center items-center">
+                        <div class="w-[90%] space-y-5">    
+                            <div class="pb-5">
+                              <p>"Quality is clearly a top priority for Rinterio. Every aspect of the design and construction process was handled with care andprecision. They were always available to address our concerns and ensured that we were completely satisfied with the outcome."</p>
+                            </div>
+                            <div class="flex justify-start items-center gap-5">
+                                <img class="rounded-full w-[20%]" src="assets/people4.png" alt="">
+                                <div>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <h1 class="text-xl font-bold">Scarlet Witch</h1>
+                                    <p>Atlanta , UK</p>
                                 </div>
                             </div>
-                          <div class="absolute left-[65%] right-[5%] top-[75%] lg:top-[70%] flex -translate-y-1/2 transform justify-between">
-                            <a href="#slide2" class="btn btn-circle border-black">❮</a>
-                            <a href="#slide5" class="btn btn-circle border-black">❯</a>
-                          </div>
                         </div>
-
-                        <div id="slide5" class="carousel-item relative w-full justify-center items-center  ">
-                            <div class="w-[90%]">
-                                
-                                <div class="pb-5">
-                                  <p>"The team at Rinterio is incredibly skilled and creative. They took on a challenging project with complex requirements and delivered a design that is both innovative and functional."</p>
-                                </div>
-                                <div class="flex justify-start items-center gap-5">
-                                   <img class="rounded-full w-[20%]" src="assets/people5.png" alt="">
-                                    <div>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <i class="fa-solid fa-star" style="color:#ffbb00"></i>
-                                        <h1 class="text-xl font-bold">Martin Alex</h1>
-                                        <p>New York , USA</p>
-                                    </div>
+                        <div class="absolute left-[65%] right-[5%] top-[75%] lg:top-[70%] flex -translate-y-1/2 transform justify-between">
+                          <a href="#slide2" class="btn btn-circle border-black">❮</a>
+                          <a href="#slide5" class="btn btn-circle border-black">❯</a>
+                        </div>
+                    </div>
+                    <div id="slide5" class="carousel-item relative w-full justify-center items-center">
+                        <div class="w-[90%] space-y-5">
+                            <div class="pb-5">
+                              <p>"The team at Rinterio is incredibly skilled and creative. They took on a challenging project with complex requirements and delivered adesign that is both innovative and functional."</p>
+                            </div>
+                            <div class="flex justify-start items-center gap-5">
+                                <img class="rounded-full w-[20%]" src="assets/people5.png" alt="">
+                                <div>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <i class="fa-solid fa-star" style="color:#ffbb00"></i>
+                                    <h1 class="text-xl font-bold">Martin Alex</h1>
+                                    <p>New York , USA</p>
                                 </div>
                             </div>
-                          <div class="absolute left-[65%] right-[5%] top-[75%] lg:top-[70%] flex -translate-y-1/2 transform justify-between">
-                            <a href="#slide3" class="btn btn-circle border-black">❮</a>
-                            <a href="#slide1" class="btn btn-circle border-black">❯</a>
-                          </div>
                         </div>
-                      </div>
-               
+                        <div class="absolute left-[65%] right-[5%] top-[75%] lg:top-[70%] flex -translate-y-1/2 transform justify-between">
+                          <a href="#slide3" class="btn btn-circle border-black">❮</a>
+                          <a href="#slide1" class="btn btn-circle border-black">❯</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -573,11 +522,10 @@
 
 
         <section class="container mx-auto mt-28">
-
             <div class="w-[90%] mx-auto flex flex-col items-end gap-5 2xl:flex-row-reverse">
-                <div class="flex flex-col justify-center items-center text-center 2xl:items-end 2xl:text-right">
+                <div class="flex flex-col justify-center items-center text-center space-y-8 2xl:items-end 2xl:text-right">
                     <h1 class="text-base font-semibold text-center text-[#494949] rounded-full border-gray-300 border-2 px-5 py-1">FAQS</h1>
-                    <h1 class="text-4xl font-bold">Your Top <br> Questions Answered</h1>
+                    <h1 class="text-4xl font-bold text-[32px] lg:text-[40px]">Your Top <br> Questions Answered</h1>
                     <img class=" lg:w-[80%] 2xl:w-auto rounded-2xl" src="assets/house12.jpg" alt="">
                 </div>
                 <div class="">
@@ -636,74 +584,64 @@
                         <div class="collapse-content">
                             <p> Its Typically Two to Three business days to contact you </p>
                         </div>
-                     </div>
-                 </div> 
-                </div>
+                    </div>
+                </div> 
             </div>
-        
         </section>
         
 
         <!-- ///////////////////////////////////////    Contact Form ////////////////////////////////////////////// -->
 
         <section class="bg-bg-image bg-no-repeat bg-center bg-cover mt-28">
-    
-    <div class="container mx-auto py-16 ">
-        <div class="flex flex-col justify-center items-center text-center space-y-5 p-8 lg:p-0">
-            <div>
-                <button class="btn btn-secondary bg-[#ABEF5F33] border-2 border-none hover:bg-[#ABEF5F33] hover:border-none text-lg font-extrabold rounded-[30px] text-[#1C1C1C]"><i class="fa-solid fa-arrow-right-long fa-lg" style="--fa-rotate-angle: 50deg;"></i>Let’s Connect</button>
-            </div>
-           
-            <h1 class="text-[40px] font-bold text-[#212121]">Let’s Discuss Next Project</h1>
-            <p class="text-[#494949] font-normal">The barn house captivates with its blend of rustic charm and modern sophistication, <br> featuring weathered wood, sleek metal accents.</p>
-        </div>
-        <div class="lg:mx-48 lg:mt-10 p-8 lg:p-0">
-            <div class="">
-                <div class="grid gap-5 grid-cols-1 sm:grid-cols-2">
-                    <input type="Name" name="name" class="h-16 block rounded-[30px] pl-8 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-[#A0A0A0] focus:outline-none sm:text-sm" placeholder="First Name *"/>
-                    <input type="email" name="email" class="h-16 rounded-[30px] pl-8 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-[#A0A0A0] focus:outline-none  sm:text-sm" placeholder="Last Name *"/>
-                    <input type="Name" name="name" class="h-16 rounded-[30px] pl-8 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-[#A0A0A0] focus:outline-none  sm:text-sm" placeholder="Phone Number *"/>
-                    <input type="email" name="email" class="h-16 rounded-[30px] pl-8 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-[#A0A0A0]  focus:outline-none  sm:text-sm" placeholder="Email Number *"/>
+            <div class="container mx-auto py-16 ">
+                <div class="flex flex-col justify-center items-center text-center space-y-5 p-8 lg:p-0">
+                    <div>
+                        <button class="btn btn-secondary bg-[#ABEF5F33] border-2 border-none hover:bg-[#ABEF5F33] hover:border-none hover:scale-[1.09] transition duration-300 ease-in-out text-lg font-extrabold rounded-[30px] text-[#1C1C1C]"><i class="fa-solid fa-arrow-right-long fa-lg" style="--fa-rotate-angle: 50deg;"></i>Let’s Connect</button>
+                    </div> 
+                    <h1 class="text-[40px] font-bold text-[#212121]">Let’s Discuss Next Project</h1>
+                    <p class="text-[#494949] font-normal">The barn house captivates with its blend of rustic charm and modern sophistication, <br> featuring weathered wood, sleek metal accents.</p>
                 </div>
-            
-                <div>
-                    <textarea name="textarea" class="mb-5 mt-5 h-60 w-full pl-8 pt-5 resize-none rounded-[30px] font-semibold text-[#A0A0A0] outline-none">Write your message here</textarea>
+                <div class="lg:mx-48 lg:mt-10 p-8 lg:p-0">
+                    <div class="">
+                        <div class="grid gap-5 grid-cols-1 sm:grid-cols-2">
+                            <input type="Name" name="name" class="h-16 block rounded-[30px] pl-8 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-[#A0A0A0] focus:outline-none sm:text-sm" placeholder="First Name *"/>
+                            <input type="email" name="email" class="h-16 rounded-[30px] pl-8 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-[#A0A0A0] focus:outline-none sm:text-sm" placeholder="Last Name *"/>
+                            <input type="Name" name="name" class="h-16 rounded-[30px] pl-8 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-[#A0A0A0] focus:outline-none  sm:text-sm" placeholder="Phone Number *"/>
+                            <input type="email" name="email" class="h-16 rounded-[30px] pl-8 bg-white px-3 py-4 placeholder-slate-400 shadow-sm placeholder:font-semibold placeholder:text-[#A0A0A0] focus:outline-none sm:text-sm" placeholder="Email Number *"/>
+                        </div>
+                        <div>
+                            <textarea name="textarea" class="mb-5 mt-5 h-60 w-full pl-8 pt-5 resize-none rounded-[30px] font-semibold text-[#A0A0A0] outline-none">Write your message here</textarea>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-secondary bg-clr border-none hover:bg-clr hover:scale-[1.09] transition duration-300 ease-in-out text-xl font-extrabold rounded-[30px] text-[#1C1C1C] w-full h-16">Send Mail<span class="bg-black rounded-full px-2 py-1"><i class="fa-solid fa-arrow-up-long fa-rotate-by fa-lg text-white" style="--fa-rotate-angle: 50deg;"></i></span></button>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-center">
-                    <button class="btn btn-secondary bg-clr border-none hover:bg-clr text-xl font-extrabold rounded-[30px] text-[#1C1C1C] w-full h-16">Send Mail<span class="bg-black rounded-full px-2 py-1"><i class=" fa-solid fa-arrow-up-long fa-rotate-by fa-lg text-white" style="--fa-rotate-angle: 50deg;"></i></span> </button>
             </div>
-        </div>
-    </div>
         </section>
-   
     </main>
 
     <footer class="bg-[#1C1C1C] py-12 px-5 sm:px-0">
-    <div class="container mx-auto">
-        <div class="flex flex-col justify-center items-center text-center space-y-5">
-            <div class="flex justify-center items-center gap-2 ">
-                <span class="bg-[#ABEF5F] rounded-full px-3 py-2 text-xl"><i class=" fa-solid fa-arrow-up-long fa-rotate-by fa-lg "style="--fa-rotate-angle:50deg"></i></span>
-                <p class="text-3xl font-bold text-[#E9E9E9]">Rinterio</p>
+        <div class="container mx-auto">
+            <div class="flex flex-col justify-center items-center text-center space-y-5">
+                <div class="flex justify-center items-center gap-2 ">
+                    <span class="bg-[#ABEF5F] rounded-full px-3 py-2 text-xl"><i class=" fa-solid fa-arrow-up-long fa-rotate-by fa-lg "style="--fa-rotate-angle:50deg"></i></span>
+                    <p class="text-3xl font-bold text-[#E9E9E9]">Rinterio</p>
+                </div>
+                <h1 class="text-[40px] font-bold text-[#E9E9E9]">Let’s Discuss Next Project</h1>
+                <p class="text-[#737373] font-normal ">Let's discuss your project! We'd love to get to know <br> you. Tell us  about your project, or just say hi! Our experts will reach out to you in 24 hours..</p>
             </div>
-           
-            <h1 class="text-[40px] font-bold text-[#E9E9E9]">Let’s Discuss Next Project</h1>
-            <p class="text-[#737373] font-normal ">Let's discuss your project! We'd love to get to know <br> you. Tell us  about your project, or just say hi! Our experts will reach out to you in 24 hours..</p>
+            <div class="text-[#E9E9E9] flex flex-col justify-evenly items-center mt-12 space-y-10 sm:flex-row sm:space-y-0">
+                <p class="cursor-pointer">Home</p>
+                <p class="cursor-pointer">Service</p>
+                <p class="cursor-pointer">Portfolio</p>
+                <p class="cursor-pointer">Blogs</p>
+                <p class="cursor-pointer">Contact Us</p>
+            </div>
+            <div class="flex items-center justify-center mt-12">
+                <button class="btn btn-secondary bg-clr border-none hover:bg-clr hover:scale-[1.09] transition duration-300 ease-in-out text-lg font-extrabold	rounded-[30px] text-[#1C1C1C] w-full sm:w-auto">Book Consult <span class="bg-black rounded-full px-2.5 py-1"><i class=" fa-solid fa-arrow-up-long fa-rotate-by fa-lg text-white" style="--fa-rotate-angle: 50deg;"></i></span> </button>
+            </div>
         </div>
-        <div class="text-[#E9E9E9] flex flex-col justify-evenly items-center mt-12 space-y-10 sm:flex-row sm:space-y-0">
-            <p>Home</p>
-            <p>Service</p>
-            <p>Portfolio</p>
-            <p>Blogs</p>
-            <p>Contact Us</p>
-        </div>
-        <div class="flex items-center justify-center mt-12">
-            <button class="btn btn-secondary bg-clr border-none hover:bg-clr text-lg font-extrabold	rounded-[30px] text-[#1C1C1C] w-full sm:w-auto">Book Consult <span class="bg-black rounded-full px-2.5 py-1"><i class=" fa-solid fa-arrow-up-long fa-rotate-by fa-lg text-white" style="--fa-rotate-angle: 50deg;"></i></span> </button>
-        </div>
-    </div>
     </footer>
-
-
- 
- 
 </body>
 </html>
